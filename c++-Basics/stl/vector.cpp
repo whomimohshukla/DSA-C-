@@ -1,34 +1,49 @@
 #include<iostream>
 #include<vector>
-#include<algorithm>
 using namespace std;
+
 int main()
 {
-    vector<int>arr{10,20,30,40};
+    vector<int> v;
 
-    arr.push_back(30);
+    // insert
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
 
-    arr.pop_back();
+    // print
+    for(int x : v)
+        cout << x << " ";
 
-    cout<<arr.size()<<endl;
-    cout<<arr.capacity()<<endl;
-    cout<<arr.empty()<<endl;
-    cout<<arr.front()<<endl;
-    cout<<arr.back()<<endl;
-   
+    cout << endl;
 
+    // size
+    cout << v.size() << endl;
 
+    // capacity
+    cout << v.capacity() << endl;
 
-    // arr.clear();
+    // access
+    cout << v[0] << endl;
+    cout << v.at(1) << endl;
 
+    // first element
+    cout << v.front() << endl;
 
+    // last element
+    cout << v.back() << endl;
 
-    
+    // remove last
+    v.pop_back();
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-       cout<<arr[i] << " ";
-    }
-    
- return 0;
+    // insert at index
+    v.insert(v.begin()+1,100);
+
+    // erase
+    v.erase(v.begin());
+
+    // clear
+    v.clear();
+
+    return 0;
 }
