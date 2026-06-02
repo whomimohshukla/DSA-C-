@@ -1,18 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// // Function to check if the array is sorted
-// bool isSorted(int arr[], int n) {
-//     for (int i = 0; i < n; i++) {
-//         for (int j = i + 1; j < n; j++) {
-//             // If any element is smaller than the previous one, return false
-//             if (arr[j] < arr[i]) 
-//                 return false;
-//         }
-//     }
-
-//     return true; // Return true if no unsorted elements are found
-// }
 
 
 // Function to check if the array is sorted
@@ -35,3 +23,18 @@ int main() {
     
     return 0;
 }
+
+
+
+// // Function to check if the array is sorted
+// bool isSorted(int arr[], int n) {
+//     for (int i = 0; i < n; i++) {
+//         for (int j = i + 1; j < n; j++) {
+//             // If any element is smaller than the previous one, return false
+//             if (arr[j] < arr[i]) 
+//                 return false;
+//         }
+//     }
+
+//     return true; // Return true if no unsorted elements are found
+// }
