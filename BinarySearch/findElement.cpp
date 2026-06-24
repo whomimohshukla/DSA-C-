@@ -19,7 +19,6 @@ int findElementUsingIterative(vector<int>& arr, int key) {
             end = mid - 1;
         }
     }
-
     return -1; // element not found
 }
 
