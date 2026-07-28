@@ -1,40 +1,39 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
-// Class containing Pascal's Triangle generation logic
-class Solution {
-public:
-    // Function to generate Pascal's Triangle up to numRows
-    vector<vector<int>> generate(int numRows) {
-        // Result vector to hold all rows
-        vector<vector<int>> triangle;
+vector<vector<int>> generate(int numRows)
+{
+    vector<vector<int>> triangle;
 
-        // Loop for each row
-        for (int i = 0; i < numRows; i++) {
-            // Create a row with size (i+1) and initialize all elements to 1
-            vector<int> row(i + 1, 1);
+    for (int i = 0; i < numRows; i++)
+    {
+        vector<int> row(i + 1, 1);
 
-            // Fill elements from index 1 to i-1 (middle values)
-            for (int j = 1; j < i; j++) {
-                // Each element = sum of two elements above it
-                row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
-            }
-
-            // Add current row to the triangle
-            triangle.push_back(row);
+        for (int j = 1; j < i; j++)
+        {
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
         }
-        return triangle;
-    }
-};
 
-int main() {
-    Solution obj;
+        triangle.push_back(row);
+    }
+
+    return triangle;
+}
+
+int main()
+{
     int n = 5;
 
-    // Generate and print Pascal's Triangle
-    vector<vector<int>> result = obj.generate(n);
-    for (auto &row : result) {
-        for (auto &val : row) cout << val << " ";
+    vector<vector<int>> result = generate(n);
+
+    for (auto &row : result)
+    {
+        for (auto &val : row)
+            cout << val << " ";
+
         cout << endl;
     }
+
+    return 0;
 }
