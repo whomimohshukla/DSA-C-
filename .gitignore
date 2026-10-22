@@ -7,3 +7,4 @@ applications.csv
 apply.py
 apply_assist.py
 sent_log.csv
+startup.py
